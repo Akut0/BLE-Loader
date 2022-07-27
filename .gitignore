@@ -1,2 +1,4 @@
 /resource/files
 /resource/BLELoader.log
+/*.zip
+/resource/bin/python/__pycache__

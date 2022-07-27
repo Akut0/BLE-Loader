@@ -62,11 +62,11 @@ call :BLELHEAD
 @echo.
 
 choice /c 12345b /n /m "Press [1],[2],[3],[4],[5] or [b] for back"
-if "%ERRORLEVEL%" == "1" set "UIscooter=1s  " & set "scooter=1s"
-if "%ERRORLEVEL%" == "2" set "UIscooter=Pro2" & set "scooter=Pro2"
-if "%ERRORLEVEL%" == "3" set "UIscooter=Mi3 " & set "scooter=Mi3"
-if "%ERRORLEVEL%" == "4" set "UIscooter=m365" & set "scooter=m365"
-if "%ERRORLEVEL%" == "5" set "UIscooter=Pro " & set "scooter=Pro"
+if "%ERRORLEVEL%" == "1" set "UIscooter=1s [BLE134]  " & set "scooter=1s"
+if "%ERRORLEVEL%" == "2" set "UIscooter=Pro2 [BLE134]  " & set "scooter=Pro2"
+if "%ERRORLEVEL%" == "3" set "UIscooter=Mi3 [BLE152]  " & set "scooter=Mi3"
+if "%ERRORLEVEL%" == "4" set "UIscooter=m365 [BLE129]  " & set "scooter=m365"
+if "%ERRORLEVEL%" == "5" set "UIscooter=Pro [BLE122]  " & set "scooter=Pro"
 call :BLELHEAD
 			if "%scooter%" == "1s" (
 				set "appURL=https://files.scooterhacking.org/firmware/1s/BLE/BLE134.bin"
@@ -238,7 +238,7 @@ copy "%home%resource\%OCDiofle%" FIRM.bin >NUL
 %py% bin\python\enc.py FIRM.bin FIRM.bin.enc
 for /f %%i in ("FIRM.bin.enc") do set "oupsz=%%~zi"
 @echo.
-echo %oupsz%
+
 REM Check File
 if not exist FIRM.bin.enc (
 		@echo Kritischer Fehler

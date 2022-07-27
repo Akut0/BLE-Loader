@@ -2,10 +2,7 @@
 setlocal enabledelayedexpansion
 set "home=%~dp0"
 cd /d "%home%resource"
-set "action=           "
 set "UIscooter=    "
-set "device=          "
-set "UIchip=        "
 set "ble=        "
 set "inpname=%~nx1"
 set "sfk=bin\sfk.exe"
@@ -134,34 +131,28 @@ call :BLELHEAD
 				@echo Download successful
 				@echo Thank^'s to !appref! ^<3
 				@echo.
-				pause
+				
 			REM end if not exist App	
 			)
 			
 		if "%scooter%" == "1s" (
 			set "OCDiofle=files\BLE\%scooter%\App.bin"
-			set "OCDsofst=0x0001B000"
-
 		)
 		REM ------------------
 		if "%scooter%" == "Pro2" (
 			set "OCDiofle=files\BLE\%scooter%\App.bin"
-			set "OCDsofst=0x0001B000"
 		)
 		REM ------------------
 		if "%scooter%" == "Mi3" (
 			set "OCDiofle=files\BLE\%scooter%\App.bin"
-			set "OCDsofst=0x0001B000"
 		)
 		REM ------------------
 		if "%scooter%" == "m365" (
 			set "OCDiofle=files\BLE\%scooter%\App.bin"
-			set "OCDsofst=0x00018000"
 		)
 		REM ------------------
 		if "%scooter%" == "Pro" (
 			set "OCDiofle=files\BLE\%scooter%\App.bin"
-			set "OCDsofst=0x00018000"
 		)
 	
 	if "%scooter%" == "Mi3" (
